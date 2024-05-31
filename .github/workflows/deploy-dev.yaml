@@ -1,0 +1,15 @@
+name: Deploy Caddy server Development
+on:
+  workflow_dispatch:
+
+env:
+  IMAGE_NAME: caddy-server
+
+jobs:
+  build-and-deploy:
+    environment: dev
+    runs-on: ubuntu-latest
+    name: Build and Push development image
+    steps:
+      - name: "Checkout GitHub Action"
+        uses: actions/checkout@main
