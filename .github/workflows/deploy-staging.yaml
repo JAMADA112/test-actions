@@ -13,3 +13,8 @@ jobs:
     steps:
       - name: "Checkout GitHub Action"
         uses: actions/checkout@main
+      - name: "Print current branch and commit info"
+        run: |
+          echo "Current branch: $(git rev-parse --abbrev-ref HEAD)"
+          echo "Latest commit hash: $(git rev-parse HEAD)"
+          echo "Latest commit message: $(git log -1 --pretty=%B)"

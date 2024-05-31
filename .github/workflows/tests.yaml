@@ -2,6 +2,8 @@ name: .NET Tests
 on:
   push:
 
+permissions: write-all
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -12,4 +14,4 @@ jobs:
       - name: Invoke workflow without inputs
         uses: benc-uk/workflow-dispatch@v1
         with:
-          workflow: 'deploy-staging.yaml'
+          workflow: "deploy-staging.yaml"
