@@ -3,7 +3,7 @@ on:
   push:
 
 permissions:
-    statuses: read
+    statuses: write
 
 jobs:
   test:
