@@ -2,7 +2,8 @@ name: .NET Tests
 on:
   push:
 
-permissions: write-all
+permissions:
+    statuses: read
 
 jobs:
   test:
