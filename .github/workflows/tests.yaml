@@ -3,7 +3,7 @@ on:
   push:
 
 permissions:
-    workflows: ['deploy-dev.yaml', 'deploy-staging.yaml', 'deploy-prod.yaml']
+    actions: write
 jobs:
   test:
     runs-on: ubuntu-latest
