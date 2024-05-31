@@ -1,4 +1,4 @@
-name: Deploy Caddy server Development
+name: Deploy Caddy server Staging
 on:
   workflow_dispatch:
 
