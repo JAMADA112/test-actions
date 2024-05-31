@@ -16,13 +16,15 @@ jobs:
         uses: benc-uk/workflow-dispatch@v1
         with:
           workflow: "deploy-staging.yaml"
+          
       - name: Invoke Prod Deployment
         if: github.ref == 'refs/heads/main'
         uses: benc-uk/workflow-dispatch@v1
         with:
-          workflow: "deploy-staging.yaml"
+          workflow: "deploy-prod.yaml"
+
       - name: Invoke Dev Deployment
         if: github.ref == 'refs/heads/dev'
         uses: benc-uk/workflow-dispatch@v1
         with:
-          workflow: "deploy-staging.yaml"
+          workflow: "deploy-dev.yaml"
